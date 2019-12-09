@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "./node_modules/.bin/ng",
     "start": "./node_modules/.bin/ng serve",
-    "build": "./node_modules/.bin/ng build",
+    "build": "yarn build:test && yarn build:qa && yarn build:staging && yarn build:prod",
     "build:prod": "./node_modules/.bin/ng build -c production",
     "build:test": "./node_modules/.bin/ng build -c test",
+    "build:qa": "./node_modules/.bin/ng build -c qa",
+    "build:staging": "./node_modules/.bin/ng build -c staging",
     "test": "./node_modules/.bin/ng test",
     "lint": "./node_modules/.bin/ng lint",
     "e2e": "./node_modules/.bin/ng e2e"
