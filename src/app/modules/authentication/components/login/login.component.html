@@ -1,1 +1,5 @@
-<p>login works!</p>
+<div>
+  <input (change)="handleChange($event)" type="text" [value]="username" name="username" #l>
+  <input type="password" (change)="handleChange($event)" [value]="l.value" name="password">
+  <button (click)="submit()">Submit</button>
+</div>
